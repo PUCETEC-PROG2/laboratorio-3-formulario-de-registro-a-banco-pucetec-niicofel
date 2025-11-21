@@ -3,12 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3 - PUCE Banco</title>
+    <title>Laboratorio 3 - Formulario de Registro - Banco Pucetec</title>
 </head>
 <body>
-    <h1>Laboratorio 3 - PUCE Banco</h1>
-    <p>Bienvenido al laboratorio 3 del curso de Desarrollo de Aplicaciones Web. En este laboratorio, implementaremos una aplicación web para un banco ficticio llamado PUCE Banco.</p>
-    <h2>Nombre del estudiante: [Tu Nombre Aquí]</h2>
-    <!-- Aquí irá el formulario -->
+    <h1>Formulario de Registro - Banco PuceTec</h1>
+    <p>Bienvenido al laboratorio 3 del curso de Desarrollo de Aplicaciones Web. En este laboratorio,
+    implementaremos una aplicación web para un banco ficticio llamado PUCE Banco.</p>
+
+    <h2>Nombre del estudiante: Felipe Nicolas Campos Cinseros</h2>
+
+    <!--Aquí irá el formulario de la pagina web-->
+
+    <form action="#" method="post">
+        <!--Los campos de respuesta irán aquí-->
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente" required />
+        </div>
+        <div>
+            <label for="apellidoPaterno">Primer Apellido:</label>
+            <input id="apellidoPaterno" name="apellidoPaterno" type="text" placeholder="Apellido paterno del cliente" required />
+        </div>
+        <div>
+            <label for="apellidoMaterno">Segundo Apellido:</label>
+            <input id="apellidoMaterno" name="apellidoMaterno" type="text" placeholder="Apellido materno del cliente" required />
+        </div>
+        <div>
+            <label for="cedula">Número de cédula:</label>
+            <input id="cedula" name="cedula" type="text" placeholder="Número de cédula del cliente" required />
+        </div>
+        <div>
+            <label for="motivo">Motivo de apertura de cuenta:</label><br />
+            <textarea id="motivo" name="motivo" rows="4" cols="40" placeholder="Motivo de apertura de cuenta del cliente" required></textarea>
+        </div>
+        <div>
+            <label for="tipoCuenta">Tipo de cuenta:</label>
+            <select id="tipoCuenta" name="tipoCuenta" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="Ahorros">Ahorros</option>
+                <option value="Corriente">Corriente</option>
+            </select>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Dirección de domicilio</legend>
+                <label for="calle">Calle:</label>
+                <input id="calle" name="calle" type="text" placeholder="Calle del domicilio del cliente" required />
+                <br /><br />
+
+                <label for="numero">Número:</label>
+                <input id="numero" name="numero" type="text" placeholder="Número del domicilio del cliente" required />
+                <br /><br />
+
+                <label for="interseccion">Intersección:</label>
+                <input id="interseccion" name="interseccion" type="text" placeholder="Interseccion del domicilio del cliente" required />
+            </fieldset>
+        </div>
+        <div>
+            <label for="foto">Cargar foto:</label>
+            <input id="foto" name="foto" type="file" accept="image/*" />
+        </div>
+        <div>
+            <button type="submit">Confirmar</button>
+        </div>
+    </form>
 </body>
 </html>
