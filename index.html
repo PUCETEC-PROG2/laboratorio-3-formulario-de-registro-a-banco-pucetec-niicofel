@@ -1,24 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3 - Formulario de Registro - Banco Pucetec</title>
+<!DOCTYPE html> <!-- Indica que el documento está en HTML5 -->
+<html lang="es"> <!-- Configura el idioma en el que está la pagina -->
+<head> <!-- Contiene los metadatos e información interna no visible directamente en la pagina web -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para permitir acentos o caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta la pagina para que sea responsive en celulares -->
+    <title>Laboratorio 3 - Formulario de Registro - Banco Pucetec</title> <!-- Titulo que aparece en la pestaña del navegador -->
 </head>
 <body>
-    <h1>Formulario de Registro - Banco PuceTec</h1>
+    <h1>Formulario de Registro - Banco PuceTec</h1> <!-- h1 sirve para poner titulos en la pagina, si son visibles, como encabezados -->
     <p>Bienvenido al laboratorio 3 del curso de Desarrollo de Aplicaciones Web. En este laboratorio,
-    implementaremos una aplicación web para un banco ficticio llamado PUCE Banco.</p>
+    implementaremos una aplicación web para un banco ficticio llamado PUCE Banco.</p> <!-- <p> sirve para poner un texto en la pagina -->
 
-    <h2>Nombre del estudiante: Felipe Nicolas Campos Cinseros</h2>
+    <h2>Nombre del estudiante: Felipe Nicolas Campos Cinseros</h2> <!-- h2 sirve para poner subtitulos, o titulos más pequeños -->
 
     <!--Aquí irá el formulario de la pagina web-->
 
-    <form action="#" method="post">
+    <form action="#" method="post"> 
+    <!-- <form> es el contenedor del forumulario; 
+    action="#" indica que los datos no se enviaran a un servidor; 
+    method="post" metodo de envio-->
+
         <!--Los campos de respuesta irán aquí-->
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente" required />
+        <div> <!-- <div> es un contenedor generico para organizar, hace que se vea saltado y no junto -->
+            <label for="nombre">Nombre:</label> <!-- <label> describe el campo; for="nombre" conecta el texto con el input -->
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente" required /> 
+            <!-- Campo donde el usuario escribe lo indicado: id, name, type, placeholder;texto guia del campo; required, obligatorio-->
         </div>
         <div>
             <label for="apellidoPaterno">Primer Apellido:</label>
@@ -33,20 +38,21 @@
             <input id="cedula" name="cedula" type="text" placeholder="Número de cédula del cliente" required />
         </div>
         <div>
-            <label for="motivo">Motivo de apertura de cuenta:</label><br />
+            <label for="motivo">Motivo de apertura de cuenta:</label><br /> <!-- <br> salto de línea -->
             <textarea id="motivo" name="motivo" rows="4" cols="40" placeholder="Motivo de apertura de cuenta del cliente" required></textarea>
+            <!-- textarea es el campo de texto, rows: numero de filas visibles, cols: columnas visibles. -->
         </div>
         <div>
             <label for="tipoCuenta">Tipo de cuenta:</label>
-            <select id="tipoCuenta" name="tipoCuenta" required>
-                <option value="">-- Selecciona una opción --</option>
-                <option value="Ahorros">Ahorros</option>
+            <select id="tipoCuenta" name="tipoCuenta" required> <!-- menú desplegable -->
+                <option value="">-- Selecciona una opción --</option> <!-- opción inicial, vacia -->
+                <option value="Ahorros">Ahorros</option> <!-- option, elemento dentro del select -->
                 <option value="Corriente">Corriente</option>
             </select>
         </div>
         <div>
-            <fieldset>
-                <legend>Dirección de domicilio</legend>
+            <fieldset> <!-- agrupa los campos relacionados y muestra un borde al rededor del grupo. -->
+                <legend>Dirección de domicilio</legend> <!-- titulo del grupo dentro del fieldset -->
                 <label for="calle">Calle:</label>
                 <input id="calle" name="calle" type="text" placeholder="Calle del domicilio del cliente" required />
                 <br /><br />
@@ -61,11 +67,11 @@
         </div>
         <div>
             <label for="foto">Cargar foto:</label>
-            <input id="foto" name="foto" type="file" accept="image/*" />
+            <input id="foto" name="foto" type="file" accept="image/*" /> <!-- permite subir archivos; accept="image" permite fotos -->
         </div>
         <div>
-            <button type="submit">Confirmar</button>
+            <button type="submit">Confirmar</button> <!-- Boton para enviar el formulario -->
         </div>
-    </form>
+    </form> <!-- cierre / fin del formulario -->
 </body>
 </html>
